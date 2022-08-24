@@ -1,0 +1,47 @@
+# Default ignored files
+# Compiled class file
+*.class
+.classpath
+.project
+.settings
+.springBeans
+.factorypath
+
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.idea
+*.iml
+.mvn
+target/
+*.versionsBackup
+mvnw
+mvnw.cmd
+.svn
+src/test/java/com/jubaozan/service/
+elk.json
+*.gz
+logs/
+/export/20200611151057-orders-ww.xls
+/export/20200611165605-orders-dev.xls
+/export/20200611172340-orders-dev.xls
+/export/20200611182007-orders-dev.xls
+/export/

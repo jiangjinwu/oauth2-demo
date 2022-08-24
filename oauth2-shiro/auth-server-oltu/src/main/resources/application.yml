@@ -1,0 +1,40 @@
+server:
+  port: 8087
+
+spring:
+  datasource:
+    name: ShiroJwt
+    url: jdbc:mysql://172.16.0.100:3306/oauth2_shiro?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      pool-name: HikariCP
+  # 404交给异常处理器处理
+  mvc:
+    throw-exception-if-no-handler-found: true
+  # 404交给异常处理器处理
+  resources:
+    add-mappings: false
+
+mybatis:
+  # Mybatis配置Mapper路径
+  mapper-locations: classpath:mapper/*.xml
+  # Mybatis配置Model类对应
+  type-aliases-package: com.wang.model.entity
+
+pagehelper:
+  params: count=countSql
+  # 指定分页插件使用哪种方言
+  helper-dialect: mysql
+  # 分页合理化参数 pageNum<=0时会查询第一页 pageNum>pages(超过总数时) 会查询最后一页
+  reasonable: 'true'
+  support-methods-arguments: 'true'
+
+mapper:
+  # 通用Mapper的insertSelective和updateByPrimaryKeySelective中是否判断字符串类型!=''
+  not-empty: true
+
+logging:
+  # Debug打印SQL
+  level.com.wang.mapper: debug
